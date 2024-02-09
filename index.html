@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Love letter</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="envelope-wrapper">
+            <div class="envelope">
+                <div class="letter">
+                    <div class="text">
+                        <strong>Dear Crush</strong>
+                        <p>
+                            As Valentine's Day approaches, I couldn't resist the opportunity to express the admiration and fondness I have for you. Your presence brightens my days, and your laughter fills the room with joy. With each interaction, I find myself captivated by your
+                            charm and kindness.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="heart"></div>
+        </div>
+    </div>
+
+    <div class="paalis"></div>
+    <div id="containers">
+        <div>
+            <p class="p">Click my heart <br>if you like it<span class="span"></span></p>
+            <svg xmlns="http://www.w3.org/2000/svg" id="hearts" viewBox="0 0 24 24">
+            <path d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+          </svg> <img id="cat">
+        </div>
+    </div>
+    <script>
+        window.addEventListener('DOMContentLoaded', () => {
+            const heart = document.getElementById('hearts');
+            const para = document.getElementById('cat');
+            const likeUnlikePost = function() {
+                if (heart.classList.contains('like')) {
+                    heart.classList.remove('like');
+                    heart.classList.add('unlike');
+
+                    para.src = 'https://media.tenor.com/fAKIFrYkfpAAAAAM/sad-sad-cat.gif';
+
+                } else {
+                    heart.classList.remove('unlike');
+                    heart.classList.add('like');
+
+                    para.src = 'https://media1.tenor.com/m/xR6_9Kh2p-EAAAAC/cat-couple-cute-cats.gif';
+                }
+            }
+
+            heart.addEventListener('click', likeUnlikePost);
+        });
+    </script>
+
+
+    <script>
+        alert(" Happy valentines i hope you like it my simple website for you.");
+        const envelope = document.querySelector('.envelope-wrapper');
+        envelope.addEventListener('click', () => {
+            envelope.classList.toggle('flap');
+        });
+    </script>
+</body>
+
+</html>
